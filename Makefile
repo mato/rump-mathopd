@@ -1,8 +1,12 @@
 all: mathopd images
 
 .PHONY: mathopd
-mathopd:
+mathopd: mathopd/src
 	$(MAKE) -C mathopd/src
+
+mathopd/src:
+	git submodule init
+	git submodule update
 
 .PHONY: images
 images:
