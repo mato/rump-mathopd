@@ -1,0 +1,3 @@
+[submodule "mathopd"]
+	path = mathopd
+	url = https://github.com/michielboland/mathopd
