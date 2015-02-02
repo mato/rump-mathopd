@@ -11,7 +11,7 @@ install `genisoimage`.
 Then, run:
 
 ````
-rumpapp-xen-make
+rumprun-xen-make
 ````
 
 To start a domU running mathopd, as root run (for example):
