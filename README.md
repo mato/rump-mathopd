@@ -1,17 +1,18 @@
 rump-mathopd
 ============
 
-Unmodified mathopd (http://mathopd.org/) plus supporting files for running on
-rumprun-xen (http://repo.rumpkernel.org/rumprun-xen).
+Unmodified [mathopd](http://mathopd.org/) plus supporting files for running it
+as a Unikernel on Xen using [rumprun](http://repo.rumpkernel.org/rumprun).
 
-To play with this, build rumprun-xen according to the instructions and add the
-`app-tools` directory to the *end* of your `$PATH`. You will also need to
-install `genisoimage`.
+To play with this, build rumprun for Xen according to the
+[instructions](http://wiki.rumpkernel.org/Repo%3A-rumprun#xen) and add the
+`app-tools` directory to your `$PATH`. You will also need to install
+`genisoimage`.
 
 Then, run:
 
 ````
-rumprun-xen-make
+make
 ````
 
 To start a domU running mathopd, as root run (for example):
