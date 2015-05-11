@@ -5,7 +5,7 @@ Unmodified [mathopd](http://mathopd.org/) plus supporting files for running it
 as a Unikernel on Xen using [rumprun](http://repo.rumpkernel.org/rumprun).
 
 To play with this, build rumprun for Xen according to the
-[instructions](http://wiki.rumpkernel.org/Repo%3A-rumprun#xen) and add the
+[instructions](http://wiki.rumpkernel.org/Repo%3A-rumprun) and add the
 `app-tools` directory to your `$PATH`. You will also need to install
 `genisoimage`.
 
