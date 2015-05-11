@@ -15,6 +15,9 @@ Then, run:
 make
 ````
 
+This will build mathopd and data images, leaving the mathopd unikernel binary
+in `bin/mathopd`.
+
 To start a domU running mathopd, as root run (for example):
 
 ````
@@ -22,7 +25,7 @@ rumprun xen -M 32 -di \
     -n inet,static,10.10.10.10/24 \
     -b images/stubetc.iso,/etc \
     -b images/data.iso,/data \
-    mathopd/src/mathopd -n -f /data/mathopd.conf
+    -- bin/mathopd -n -t -f /data/mathopd.conf
 ````
 
 Replace `10.10.10.10/24` with a valid IP address on your Xen network.

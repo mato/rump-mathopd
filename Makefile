@@ -1,7 +1,8 @@
-all: mathopd images
+all: bin/mathopd images
 
-.PHONY: mathopd
-mathopd: mathopd/src/mathopd
+bin/mathopd: mathopd/src/mathopd
+	mkdir -p bin
+	cp $< $@
 
 mathopd/src/mathopd: mathopd/src
 	$(MAKE) -C mathopd/src CC=rumprun-xen-cc
@@ -22,4 +23,5 @@ images/data.iso: images/data/mathopd.conf images/data/www/*
 .PHONY: clean
 clean:
 	$(MAKE) -C mathopd/src clean
+	rm -f bin/mathopd
 	rm -f images/stubetc.iso images/data.iso
